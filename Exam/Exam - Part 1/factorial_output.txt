@@ -1,0 +1,97 @@
+I have deleted a number of the comparisons from my output since 100 is a lot to put in a file. Here are some extracts.
+
+At low numbers, both the loop and the memoirisation methods stand out.
+
+From about n=12, the time for the loop methods increases dramatically. By the time n = 100, the loop method is taking around 10 times longer than the memoirise method.
+
+[[1]]
+Unit: microseconds
+                expr    min     lq      mean median      uq       max neval
+   Factorial_loop(n)  4.345  5.530  85.15565  6.321 10.0745  7639.710   100
+ Factorial_reduce(n) 37.136 39.506 171.65450 42.074 69.3335 11200.009   100
+   Factorial_func(n)  9.481 10.667  59.13292 11.457 17.7780  4481.583   100
+    Factorial_mem(n)  4.741  5.531  93.25843  6.321  9.0865  8586.278   100
+
+[[2]]
+Unit: microseconds
+                expr    min      lq     mean  median      uq     max neval
+   Factorial_loop(n)  4.740  6.3210 10.52058  9.0870 11.0620  62.815   100
+ Factorial_reduce(n) 37.926 53.5315 72.43466 62.6175 73.6795 403.359   100
+   Factorial_func(n) 15.407 23.7035 30.16306 26.4690 30.6175 140.247   100
+    Factorial_mem(n)  5.135  6.7160 12.29040  9.4810 11.8520 117.728   100
+
+[[3]]
+Unit: microseconds
+                expr    min     lq     mean median      uq     max neval
+   Factorial_loop(n)  4.740  5.136  6.96107  5.531  6.3210  21.728   100
+ Factorial_reduce(n) 35.951 38.716 64.45438 40.099 69.5310 232.692   100
+   Factorial_func(n) 19.358 20.939 29.54679 22.124 24.6915 136.691   100
+    Factorial_mem(n)  4.740  5.136  8.07911  5.531  6.7165  40.691   100
+
+-----------------------------------------------------------------------------------------------
+.
+.
+.
+-----------------------------------------------------------------------------------------------
+
+[[12]]
+Unit: microseconds
+                expr    min     lq     mean median       uq     max neval
+   Factorial_loop(n)  5.135  5.531  7.60893  6.321   6.7165  27.259   100
+ Factorial_reduce(n) 41.482 44.247 57.58433 47.407  70.1235 133.926   100
+   Factorial_func(n) 67.161 70.321 90.38629 76.642 107.8525 192.000   100
+    Factorial_mem(n)  4.740  5.530  7.88945  5.926   7.3085  58.470   100
+
+[[13]]
+Unit: microseconds
+                expr    min       lq      mean   median       uq     max neval
+   Factorial_loop(n) 48.987  51.3580  66.54425  53.3335  68.3455 263.111   100
+ Factorial_reduce(n) 93.235 100.9380 147.67819 122.4690 159.8025 442.075   100
+   Factorial_func(n) 74.272  78.4205 105.09842  82.9635 124.4445 387.161   100
+    Factorial_mem(n)  4.741   6.3210   9.84899   7.5070  10.4695  40.296   100
+
+-----------------------------------------------------------------------------------------------
+.
+.
+.
+-----------------------------------------------------------------------------------------------
+
+[[96]]
+Unit: microseconds
+                expr     min       lq       mean   median        uq      max neval
+   Factorial_loop(n)  58.074  69.7285  118.36457  95.8025  122.8645 1037.037   100
+ Factorial_reduce(n) 156.049 185.6790  408.64435 247.5065  341.1365 6689.586   100
+   Factorial_func(n) 638.420 694.5190 1273.86975 802.5690 1214.0260 6718.030   100
+    Factorial_mem(n)   5.136   7.5065   15.69987  10.6665   17.7780   71.901   100
+
+[[97]]
+Unit: microseconds
+                expr     min       lq       mean   median        uq      max neval
+   Factorial_loop(n)  58.864  65.5800  156.04568  86.9135  150.9140 2065.780   100
+ Factorial_reduce(n) 155.654 175.8030  370.76179 226.3710  355.5555 4001.583   100
+   Factorial_func(n) 646.322 693.1365 1249.29286 765.2355 1106.3715 7662.228   100
+    Factorial_mem(n)   5.136   7.9010   13.99711   9.0870   16.0000   86.123   100
+
+[[98]]
+Unit: microseconds
+                expr     min       lq       mean   median        uq      max neval
+   Factorial_loop(n)  58.074  64.7905  107.67822  75.4570  113.7780  803.556   100
+ Factorial_reduce(n) 152.099 169.0870  297.15382 210.3705  285.0370 3937.978   100
+   Factorial_func(n) 654.222 681.8770 1170.06705 848.3960 1121.1855 7554.377   100
+    Factorial_mem(n)   5.136   6.7165   11.63074   8.2970   12.4445   96.790   100
+
+[[99]]
+Unit: microseconds
+                expr     min       lq       mean   median        uq      max neval
+   Factorial_loop(n)  58.469  70.1235  121.26828  96.5925  128.7900  580.741   100
+ Factorial_reduce(n) 157.234 184.4940  328.71535 234.2715  299.6550 4490.275   100
+   Factorial_func(n) 654.618 703.0130 1011.92386 859.0625 1120.1985 2710.125   100
+    Factorial_mem(n)   5.531   8.0990   37.09642  10.6665   13.6295 2354.570   100
+
+[[100]]
+Unit: microseconds
+                expr     min       lq       mean    median       uq       max neval
+   Factorial_loop(n)  59.654  72.8895  155.06192  109.8270  173.630  1868.248   100
+ Factorial_reduce(n) 150.519 221.0375  440.63648  311.7040  425.877  4302.621   100
+   Factorial_func(n) 674.766 736.5935 1923.81002 1100.2475 1484.446 37242.893   100
+    Factorial_mem(n)   5.135   7.7035   47.36797   11.6545   20.741  3147.459   100
